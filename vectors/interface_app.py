@@ -76,10 +76,10 @@ def main(title="EMAIL PHISHING IDENTIFIER".upper()):
         </style>
     """, unsafe_allow_html=True)
 
-    # Page Title with improved styling
+    # Page Title
     st.markdown("<h1 class='header-title'>{}</h1>".format(title), unsafe_allow_html=True)
 
-    # Load and display the image with a larger size
+    # Load and display the image
     img = Image.open("C:\\Users\\elkus\\OneDrive\\Desktop\\fish\\images\\phishing.png")
     img_base64 = get_image_base64(img)
     st.markdown(
@@ -91,7 +91,7 @@ def main(title="EMAIL PHISHING IDENTIFIER".upper()):
         unsafe_allow_html=True,
     )
 
-    # Add a section for the email input
+    # Section for the email input
     with st.expander("🔍 **Check Your Email**"):
         st.markdown("<p style='font-family:Calibri; font-size: 18px;'>Enter the email contents below to check if it’s a phishing attempt:</p>", 
                     unsafe_allow_html=True)
@@ -106,7 +106,7 @@ def main(title="EMAIL PHISHING IDENTIFIER".upper()):
             else:
                 st.error('⚠️ Warning: This email could be **PHISHING**')
 
-    # Add a footer
+    # Add custom footer
     st.markdown("<hr style='border:1px solid #c0c0c0;'>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; color: #c0c0c0; font-size: 14px;'>Created by Brian Kusi | Stay Alert: Don't Get Hooked!</p>", 
                 unsafe_allow_html=True)
